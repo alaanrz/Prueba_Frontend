@@ -1,0 +1,23 @@
+@charset "UTF-8";
+*{
+	font-family: 'Roboto', sans-serif;
+}
+#wrapper{
+max-width:320px ;
+min-width: 414px
+}
+h1{font-size: 15px;
+color:#3396FF;
+margin-top:10px}
+p{font-size: 10px;
+margin-top:10px}
+h5{background-color: purple;
+}
+button{color:#3396FF;
+background-color:transparent;
+margin-top:10px;
+float:right;
+border-color: transparent;
+box-shadow: none;}
+i{color: #85929E ;
+}

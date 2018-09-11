@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="description" content="Prueba FrontEnd ">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prueba FrontEnd</title>
+<!--Styles-->
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<!-- Iconos de Font-awesome -->
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/all.css">
+<!--load all styles -->
+<!-- Fuentes de la libreria de google -->
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <form id="form-contacto" method="post">
+      <div class="row">
+        <h2 class="text-center">FORMULARIO DE CONTACTO</h2>
+        <div class="form-group col-md-6">
+          <label for="name">NOMBRE *</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre" required="required">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">CORREO ELECTRÓNICO *</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo electronico" required="required">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="message">MENSAJE *</label>
+          <textarea class="form-control" id="message" name="message" rows="5" placeholder="Ingrese el mensaje" required></textarea>
+        </div>
+      </div>
+      <button type="submit" id="form-submit" name="enviar" class="btn btn-success btn-lg pull-right">ENVIAR</button>
+    </form>
+    <div class="row">
+      <div class="col-md-12">
+        <p><strong>*</strong> Todos estos campos son obligatorios</p>
+      </div>
+    </div>
+  </div>
+  <!-- Jquery -->
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<!-- Bootstrap Js-->
+	<script src="../js/bootstrap.min.js"></script>
+	<!--<script defer src="js/all.js"></script>-->
+	<!--load all styles -->
+  <script>
+		$(document).ready(function() {
+			$('#form-contacto').submit(function(e) {
+				var self = this
+				e.preventDefault()
+				$.ajax({
+					type : "POST",
+					url : "mailer.php",
+					data : $('#form-contacto').serialize(),
+					success : function(data) {
+						response = jQuery.parseJSON(data)
+						if (response.status === 0) {
+							alert('Tu mensaje ha sido enviado')
+						} else {
+							alert('Ocurrio un error al enviar tu mensaje')
+						}
+					},
+					error : function(e) {
+						alert("failure: " + e)
+					}
+				})
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="description" content="Prueba FrontEnd ">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prueba FrontEnd</title>
+<!--Styles-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- Iconos de Font-awesome -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/all.css">
+<!--load all styles -->
+<!-- Fuentes de la libreria de google -->
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="slider" class="carousel slide carousel-fade"
+			data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#slider" data-slide-to="0" class="active"></li>
+				<li data-target="#slider" data-slide-to="1"></li>
+				<li data-target="#slider" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+					<img class="d-block w-100" src="img/Decoracion.jpg"
+						alt="Decoracion">
+					<div class="carousel-caption">
+						<h5>Super Destacado</h5>
+						<i class="far fa-heart"></i>
+						<h2>U$S 1.400.000</h2>
+						<p>380m2     3 Dormitorios    2 Baños    2 Cocheras</p>
+</div>
+				</div>
+				<!--</div>-->
+				<div class="carousel-item">
+					<!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+					<img class="d-block w-100" src="img/Decoracion.jpg"
+						alt="Decoracion">
+				</div>
+				<!--</div>-->
+				<div class="carousel-item">
+					<!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+					<img class="d-block w-100" src="img/Decoracion.jpg"
+						alt="Decoracion">
+				</div>
+				<!--</div>-->
+			</div>
+			<a class="carousel-control-prev" href="#slider" role="button"
+				data-slide="prev"> <span class="carousel-control-prev-icon"
+				aria-hidden="true"></span> <span class="sr-only">Previous</span>
+			</a> <a class="carousel-control-next" href="#slider" role="button"
+				data-slide="next"> <span class="carousel-control-next-icon"
+				aria-hidden="true"></span> <span class="sr-only">Next</span>
+			</a>
+		</div>
+		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+		<i class="fas fa-map-marker-alt fa-xs">Juan Francisco Segui
+			1458,Palermo Chico,Palermo</i>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla
+			maiores ea quo impedit nobis doloribus eligendi sapiente numquam
+			culpa sequi. Laudantium in atque quos omnis inventore doloremque
+			tempora. Ea alias. Lorem ipsum dolor sit amet, consectetur
+			adipisicing elit. Dolorem illum dicta tempora quas hic nostrum vero
+			porro autem. Id ad debitis repudiandae quae tempore perferendis ullam
+			deleniti facilis earum odio!</p>
+			<a href="html/Contacto.html"><button type="button">Contactar</button></a>
+		<footer> </footer>
+	</div>
+	<!-- Jquery -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Bootstrap Js-->
+	<script src="js/bootstrap.min.js"></script>
+	<!--<script defer src="js/all.js"></script>-->
+	<!--load all styles -->
+	<script>
+		$('.carousel').carousel({
+			interval : 5000,
+			pause : null
+		});
+	</script>
+	
+</body>
+</html>
