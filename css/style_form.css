@@ -1,0 +1,14 @@
+@charset "UTF-8";
+*{
+	font-family: 'Roboto', sans-serif;
+}
+#wrapper{
+max-width:320px ;
+min-width: 414px
+}
+h2{color:#3396FF;
+margin: 0 auto;}
+p{color:#3396FF;
+margin: 0 auto;}
+label{color:#3396FF;
+margin: 0 auto;}

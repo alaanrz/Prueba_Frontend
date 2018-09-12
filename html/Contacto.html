@@ -7,7 +7,7 @@
 <title>Prueba FrontEnd</title>
 <!--Styles-->
 <link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/style_form.css">
 <!-- Iconos de Font-awesome -->
 <link rel="stylesheet" href="../css/font-awesome.min.css">
 <link rel="stylesheet" href="../css/all.css">
@@ -17,10 +17,12 @@
 	rel="stylesheet">
 </head>
 <body>
+<div id="wrapper">
 <div class="container-fluid">
     <form id="form-contacto" method="post">
       <div class="row">
         <h2 class="text-center">FORMULARIO DE CONTACTO</h2>
+        <p>Para ser contactado por favor complete todos los campos.</p>
         <div class="form-group col-md-6">
           <label for="name">NOMBRE *</label>
           <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre" required="required">
@@ -44,6 +46,7 @@
       </div>
     </div>
   </div>
+  </div>
   <!-- Jquery -->
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<!-- Bootstrap Js-->
@@ -57,7 +60,7 @@
 				e.preventDefault()
 				$.ajax({
 					type : "POST",
-					url : "mailer.php",
+					url : "../mailer.php",
 					data : $('#form-contacto').serialize(),
 					success : function(data) {
 						response = jQuery.parseJSON(data)
